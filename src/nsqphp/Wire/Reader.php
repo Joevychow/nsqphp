@@ -189,7 +189,7 @@ class Reader
      */
     private function readString(ConnectionInterface $connection, $size)
     {
-        $temp = unpack("c{$size}chars", $connection->read($size));
+        $temp = unpack("C{$size}chars", $connection->read($size));
         $out = ""; 
         foreach($temp as $v) {
             if ($v > 0) {
